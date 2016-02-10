@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "Text Finder Alert Plugin",
+	"description": "This extension will alert users when text is found on a certain web page.",
+	"version": "1.0",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://www.mybrickdeal.com/*"],
+			"js": ["mybrickdeal.js"],
+			"run_at": "document_idle"
+		}
+	]
+}
